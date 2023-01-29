@@ -81,6 +81,19 @@ namespace AppAdo06.Controller
             }
         }
 
+        public List<Producto> ProductoListar2()
+        {
+            try
+            {
+                return dao.ListarProductos();
+            }
+            catch (SqlException ex)
+            {
+                throw ex;
+            }
+        }
+
+
         public List<usp_Proveedor_Listar_Result> ProveedorListar()
         {
             try

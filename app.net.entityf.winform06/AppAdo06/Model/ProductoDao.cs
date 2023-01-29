@@ -54,6 +54,18 @@ namespace AppAdo06.Model
             return dc.usp_Productos_Listar().ToList();
         }
 
+        public List<Producto> ListarProductos()
+        {
+            try
+            {
+                return dc.Productos.ToList();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
         public void update(usp_Productos_Listar_Result t)
         {
             dc.usp_Producto_Actualizar(t.NombreProducto, t.IdProveedor, t.IdCategoría, t.PrecioUnidad, t.UnidadesEnExistencia, t.IdProducto);

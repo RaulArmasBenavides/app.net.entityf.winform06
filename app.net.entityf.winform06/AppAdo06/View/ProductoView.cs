@@ -124,7 +124,7 @@ namespace AppAdo06.View
 
         private void listaProductos()
         {
-            dgvProducto.DataSource = obj.ProductoListar();
+            dgvProducto.DataSource = obj.ProductoListar2();
         }
 
         private usp_Productos_Listar_Result leerProducto()
